@@ -1,0 +1,11 @@
+TXTParsing.java
+
+The file TXTParsing.java is a Java class file that contains a static method parse which takes a file path as input and returns a list of MyDoc objects.
+
+The purpose of this file seems to be parsing a text file and extracting information from it. It reads the entire file into a string, splits the string 
+into individual documents, and then parses each document to extract the ID, title, and content. The parsed documents are stored in a list of MyDoc objects 
+and returned as the result.
+
+Additionally, the code includes some print statements for debugging purposes, which display the number of documents read, the parsed document details, 
+and the number of parsed documents.
+
