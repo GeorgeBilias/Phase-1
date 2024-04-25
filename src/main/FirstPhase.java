@@ -68,7 +68,7 @@ public class FirstPhase {
             // make a new, empty document
             Document doc = new Document();
             
-            // create the fields of the document and add them to the document
+            // create the fields of the document and add them to the document (I NEED TO FIND THE CORRRECT FIELD TYPE FOR ID, TITLE AND CONTENT)
             StoredField id = new StoredField("id", mydoc.getID());
             doc.add(id);
             StoredField title = new StoredField("title", mydoc.getTitle());

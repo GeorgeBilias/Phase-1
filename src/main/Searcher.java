@@ -53,7 +53,7 @@ public class Searcher {
             Analyzer analyzer = new EnglishAnalyzer();
             
             // create a query parser on the field "contents"
-            QueryParser parser = new QueryParser(field, analyzer);
+            QueryParser parser = new QueryParser(field, analyzer);              
             
             // read user's query from stdin
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -66,7 +66,7 @@ public class Searcher {
                 System.out.println("Searching for: " + query.toString(field));
                 
                 // search the index using the indexSearcher
-                TopDocs results = indexSearcher.search(query, 100); // search the index using the indexSearcher, FIND TOP 100 DOCUMENTS
+                TopDocs results = indexSearcher.search(query, 50); // search the index using the indexSearcher, FIND TOP 100 DOCUMENTS
                 ScoreDoc[] hits = results.scoreDocs; // get the results of the search
                 long numTotalHits = results.totalHits; // get the total number of matching documents
                 System.out.println(numTotalHits + " total matching documents"); // display the total number of matching documents
@@ -88,7 +88,7 @@ public class Searcher {
     }
 
     /**
-     * Initialize a SearcherDemo
+     * Initialize a Searcher
      */
     public static void main(String[] args){
         Searcher searcher = new Searcher(); // create a SearcherDemo
