@@ -47,6 +47,8 @@ public class Searcher {
     /**
      * Searches the index given a specific user query.
      */
+
+     // FIX HERE
     private void search(IndexSearcher indexSearcher, String field){
         try{
             // define which analyzer to use for the normalization of user's query
