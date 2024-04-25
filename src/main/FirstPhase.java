@@ -60,7 +60,7 @@ public class FirstPhase {
             e.printStackTrace(); //catch the error
         }
     }
-
+    // FIX HERE
     private static void indexDoc(IndexWriter indexWriter, MyDoc mydoc){
         
         try {

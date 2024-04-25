@@ -66,7 +66,7 @@ public class Searcher {
                 System.out.println("Searching for: " + query.toString(field));
                 
                 // search the index using the indexSearcher
-                TopDocs results = indexSearcher.search(query, 50); // search the index using the indexSearcher, FIND TOP 100 DOCUMENTS
+                TopDocs results = indexSearcher.search(query, 50); // search the index using the indexSearcher, FIND TOP 50 DOCUMENTS
                 ScoreDoc[] hits = results.scoreDocs; // get the results of the search
                 long numTotalHits = results.totalHits; // get the total number of matching documents
                 System.out.println(numTotalHits + " total matching documents"); // display the total number of matching documents
@@ -74,6 +74,7 @@ public class Searcher {
 
                 //display results
                 for(int i=0; i<hits.length; i++){
+                    System.out.println("Doc "+i+1);
                     Document hitDoc = indexSearcher.doc(hits[i].doc);
                     System.out.println("\tScore "+hits[i].score +"\tid="+hitDoc.get("id")); //display the document's id
                 } // for each document
